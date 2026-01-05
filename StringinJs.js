@@ -60,3 +60,4 @@ let URL = "https://www.Hasnain.com.info";
 console.log(URL.replace('com' , 'Gmail'));
 
 
+console.log(URL.includes('Hasnain'))
