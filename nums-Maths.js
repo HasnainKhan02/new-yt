@@ -25,7 +25,15 @@
 // // OUT_PUT is   1312.00
 //  Give those values which is right side of . DOT => there is not values SO it Gives 00
 
-balance = 231211
-let rounded = Number(balance.toFixed(2));
-console.log(rounded); 
+// balance = 231211
+// let rounded = Number(balance.toFixed(2));
+// console.log(rounded); 
 
+
+//  ********************** toprecised() ***********************
+
+// let cost = 199.456
+
+
+// console.log(cost.toPrecision(3));
+// console.log(cost.toFixed(2));
