@@ -61,3 +61,9 @@ console.log(URL.replace('com' , 'Gmail'));
 
 
 console.log(URL.includes('Hasnain'))
+
+
+// ***************   SPLIT     ***************************    
+
+
+console.log(URL.split('.'))
