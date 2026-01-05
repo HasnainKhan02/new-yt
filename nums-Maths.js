@@ -27,5 +27,5 @@
 
 balance = 231211
 let rounded = Number(balance.toFixed(2));
-console.log(rounded); // 199.46
+console.log(rounded); 
 
