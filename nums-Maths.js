@@ -37,3 +37,9 @@
 
 // console.log(cost.toPrecision(3));
 // console.log(cost.toFixed(2));
+
+
+//  ********************** toLocalString() ***********************
+
+let hundered = 100000
+console.log(hundered.toLocaleString('en-PK'));
