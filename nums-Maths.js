@@ -40,23 +40,26 @@ console.log(typeof cost.toFixed(2));
 
 //  ********************** toLocalString() ***********************
 
-// let hundered = 100000
-// console.log(hundered.toLocaleString('en-PK')); //  100,000 Add Commas ,, For understand more batter
+ let hundered = 100000
+console.log(hundered.toLocaleString('en-PK')); //  100,000 Add Commas ,, For understand more batter
 
 
 //  ********************** parseInt() ***********************
 
 
-// let number = "12345.23"
-//console.log(parseInt(number)); // ParseInt => Convert string to Numbers Also remove flot numbers on Right side like => .23 
+ let number = "12345.23"
+console.log(parseInt(number)); // ParseInt => Convert string to Numbers Also remove flot numbers on Right side like => .23 
 
-// let name = "Hasnian" 
-//console.log(parseInt(name)); //Output = "NaN"  => String is Converted to Numbers also Mean Name is not Number not String
+ let name = "Hasnian" 
+console.log(parseInt(name)); //Output = "NaN"  => String is Converted to Numbers also Mean Name is not Number not String
 //console.log(typeof parseInt(name)); // Output = "number"
 
 
 //  ********************** parseFloat() ***********************
+
 // parseFloat() string ko decimal number (floating number) mein convert karta hai.
+
+
 let Brand_name = "Service"
 console.log(parseFloat(Brand_name)); // Output = "NaN"
 
