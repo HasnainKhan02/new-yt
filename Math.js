@@ -45,8 +45,11 @@ let num = -1234
 
 // Between 10 to 20
 
-let min = 1
-let max = 6
+console.log(Math.random()); // Value between 0 & 1
 
-console.log(Math.floor(Math.random() * (max - min + 1) + min )); // FORMULA used to Predict Like ludo Dice
+
+// let min = 1
+// let max = 6
+
+// console.log(Math.floor(Math.random() * (max - min + 1) + min )); // FORMULA used to Predict Like ludo Dice
 
