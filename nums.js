@@ -56,6 +56,7 @@ console.log(typeof cost.toFixed(2));
 
 
 //  ********************** parseFloat() ***********************
+
 // parseFloat() string ko decimal number (floating number) mein convert karta hai.
 let Brand_name = "Service"
 console.log(parseFloat(Brand_name)); // Output = "NaN"
