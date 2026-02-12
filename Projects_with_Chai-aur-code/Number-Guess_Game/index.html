@@ -1,81 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Number Guessing Game</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:sans-serif;
-}
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
 
-body{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#1e1e1e;
-}
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/back-img.jpg);
+        background-size: cover;
+      }
 
-.game{
-  background:#fff;
-  padding:25px;
-  width:320px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
+      .game {
+        background: rgba(255, 255, 255, 0.3);
+        padding: 25px;
+        min-width: 200px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
 
-h1{ margin-bottom:10px; }
+      h1 {
+        margin-bottom: 10px;
+      }
 
-.guess-input{
-  width:100%;
-  padding:10px;
-  margin:15px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
-}
+      .guess-input {
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
 
-button{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:16px;
-}
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
 
-.guess-btn{ background:#ff9800; color:#fff; }
-.reset-btn{ background:#2196f3; color:#fff; }
+      .guess-btn {
+        background: #ff9800;
+        color: #fff;
+      }
+      .reset-btn {
+        background: #2196f3;
+        color: #fff;
+      }
 
-.message{ margin-top:15px; font-weight:bold; }
-.guess{ margin-top:5px; color:#555; }
-.attempts{ margin-top:5px; color:#666; }
-.previous{ margin-top:5px; font-size:14px; }
-</style>
-</head>
-<body>
+      .message {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .guess {
+        margin-top: 5px;
+        color: #555;
+      }
+      .attempts {
+        margin-top: 5px;
+        color: #f7eaea;
+        font-weight: bold;
+      }
+      .previous {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game">
+      <h1>Number Guessing Game</h1>
+      <p>Guess number between <b>1 and 10</b></p>
 
-<div class="game">
-  <h1>Number Guessing Game</h1>
-  <p>Guess number between <b>1 and 10</b></p>
+      <input type="number" class="guess-input" placeholder="Enter your guess" />
 
-  <input type="number" class="guess-input" placeholder="Enter your guess">
+      <button class="guess-btn">Check Guess</button>
+      <button class="reset-btn">Try Again</button>
 
-  <button class="guess-btn">Check Guess</button>
-  <button class="reset-btn">Try Again</button>
+      <p class="message">Result will appear here</p>
+      <p class="guess"></p>
+      <p class="attempts">Attempts: 10</p>
+      <p class="previous"></p>
+    </div>
 
-  <p class="message">Result will appear here</p>
-  <p class="guess"></p>
-  <p class="attempts">Attempts: 10</p>
-  <p class="previous"></p>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

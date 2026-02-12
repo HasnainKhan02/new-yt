@@ -1,4 +1,3 @@
-
 let result = document.querySelector(".message");
 let Btn = document.querySelector(".guess-btn");
 let greater = document.querySelector(".guess");
@@ -28,12 +27,10 @@ Btn.addEventListener("click", () => {
     result.innerHTML = "🎉 Correct Guess!";
     greater.innerHTML = "";
     Btn.disabled = true;
-  } 
-  else if (guess > guessNumber) {
+  } else if (guess > guessNumber) {
     result.innerHTML = "Wrong Guess";
     greater.innerHTML = "Your guess is Greater";
-  } 
-  else {
+  } else {
     result.innerHTML = "Wrong Guess";
     greater.innerHTML = "Your guess is Smaller";
   }
@@ -41,6 +38,10 @@ Btn.addEventListener("click", () => {
   if (attempts === 0 && guess !== guessNumber) {
     result.innerHTML = "Game Over! Number was " + guessNumber;
     Btn.disabled = true;
+  }
+  if (attempts === 0) {
+    Btn.disabled = true; // disable button
+    Btn.style.backgroundColor = "black"; // change color to black
   }
 });
 
@@ -55,4 +56,5 @@ resetBtn.addEventListener("click", () => {
   attemptsText.innerHTML = "Attempts: 10";
   document.querySelector(".guess-input").value = "";
   Btn.disabled = false;
+  Btn.style.backgroundColor = "#ff9800";
 });
