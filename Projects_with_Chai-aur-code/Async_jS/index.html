@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .timer {
+        height: 150px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: none;
+        border-radius: 8px;
+        background-color: orange;
+        color: white;
+        font-size: 2rem;
+        gap: 30px;
+      }
+      button {
+        border: none;
+        padding: 10px 12px;
+        cursor: pointer;
+      }
+      #start {
+        background-color: green;
+        color: white;
+      }
+      #stop {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome To Acync JS</h1>
+    <div class="timer">
+      <span class="Time">50</span>
+      <div class="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    // let change = document.querySelector("h1");
+    // setTimeout(() => {
+    //   console.log("HEllo");
+
+    //   change.innerText = "Change";
+    // }, 2000);
+
+    // setInterval(() => {
+    //   change.innerText="Change"
+    //   console.log("HEllo");
+
+    // }, 2000);
+    let Time = document.querySelector(".Time");
+    let start = document.getElementById("start");
+    let stop = document.getElementById("stop");
+    let count = 50;
+
+    start.addEventListener("click", () => {
+      let clr = setInterval(() => {
+        count--;
+        Time.innerHTML = count;
+      }, 100);
+    });
+    stop.addEventListener("click", () => {
+      // if (count <= 0) {
+        clearInterval();
+        Time.innerHTML = "Game Over";
+      } 
+    )
+  </script>
+</html>

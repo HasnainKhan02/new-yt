@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        gap: 20px;
+      }
+      .Timer {
+        height: 150px;
+        border: 1px solid black;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Timer">
+      <h1 id="timer">50</h1>
+    </div>
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+
+    <script>
+      let timer = document.getElementById("timer");
+      let startBtn = document.getElementById("start");
+      let stopBtn = document.getElementById("stop");
+
+      let count = 50;
+      let interval = null; // will store interval ID
+
+      function startTimer() {
+        if (interval) return; // prevent multiple intervals
+        interval = setInterval(() => {
+          timer.innerText = count;
+          count--;
+
+          if (count < 0) {
+            clearInterval(interval);
+            interval = null; // reset interval
+            timer.innerText = "Time Up";
+          }
+        }, 100);
+      }
+
+      function stopTimer() {
+        clearInterval(interval);
+        interval = null; // reset interval
+      }
+
+      startBtn.addEventListener("click", startTimer);
+      stopBtn.addEventListener("click", stopTimer);
+    </script>
+  </body>
+</html>

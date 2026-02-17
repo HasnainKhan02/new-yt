@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Project</title>
+    <style>
+      body {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+      }
+      .color,
+      tr,
+      th,
+      td {
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="insert"></div>
+      <span>Press any key to see Magic</span>
+    </div>
+    <script>
+      let insert = document.querySelector(".insert");
+      window.addEventListener("keydown", (e) => {
+        insert.innerHTML = `
+<div class='color'>
+    <table>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+ 
+</table>
+    
+    </div>
+
+`;
+      });
+    </script>
+  </body>
+</html>
